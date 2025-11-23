@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anagha G S - Resume</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f7fb;
+        margin: 0;
+        color: #333;
+    }
+
+    .resume {
+        width: 80%;
+        background: #ffffff;
+        margin: 40px auto;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 42px;
+        color: #005bbb;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .subtitle {
+        text-align: center;
+        color: #666;
+        font-size: 18px;
+        margin-top: 5px;
+    }
+
+    .header-line {
+        height: 4px;
+        background: #005bbb;
+        margin: 20px 0;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        gap: 30px;
+    }
+
+    .section-title {
+        font-size: 22px;
+        font-weight: bold;
+        color: #005bbb;
+        border-left: 5px solid #005bbb;
+        padding-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    .item-title {
+        font-weight: bold;
+        font-size: 18px;
+        margin: 8px 0;
+        color: #222;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    li {
+        margin-bottom: 8px;
+        color: #444;
+    }
+
+    .skills span {
+        background: #005bbb;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        display: inline-block;
+        margin: 4px;
+        font-size: 14px;
+    }
+
+    .lang-dots span {
+        height: 10px;
+        width: 10px;
+        background: #005bbb;
+        display: inline-block;
+        border-radius: 50%;
+        margin-right: 3px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="resume">
+
+    <h1 id="name"></h1>
+    <p class="subtitle">Computer Science Engineering Student</p>
+
+    <div class="header-line"></div>
+
+    <div class="grid">
+
+        <!-- LEFT -->
+        <div>
+            <h2 class="section-title">Courses</h2>
+            <p class="item-title">CS Engineering Coursework</p>
+            <P>Jawaharlal Nehru New College of Engineering</P>
+            <ul>
+                <li>Completed core programming subjects using C,Python and Java</li>
+                <li>Worked on exploring AI tools and Web in Action-Design to Kinder World</li>
+            </ul>
+
+            <h2 class="section-title">Projects</h2>
+            <p class="item-title">Web Design Project</p>
+            <ul><li>Developed using HTML, CSS, JS</li></ul>
+
+            <p class="item-title">AI Tools Exploration</p>
+            <ul><li>Explored  AI tool-presenti.ai</li></ul>
+
+            <p class="item-title">Mini Coding Projects</p>
+            <ul><li>Created Car Service Online Booking Project</li></ul>
+
+            <h2 class="section-title">Interests</h2>
+            <p>Web Development, Coding, AI Tools</p>
+        </div>
+
+        <!-- RIGHT -->
+        <div>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills" id="skills"></div>
+
+            <h2 class="section-title">Education</h2>
+            <p class="item-title">B.E in Computer Science</p>
+            <p>Jawaharlal Nehru New College of Engineering
+                <br>
+                2025-pursuing
+            </p>
+
+            <h2 class="section-title">Certificates</h2>
+            <ul id="certificates"></ul>
+
+            <h2 class="section-title">Languages</h2>
+            <p>C, Python, Java</p>
+            <div class="lang-dots"><span></span><span></span><span></span><span></span></div>
+
+            <p>English</p>
+            <div class="lang-dots"><span></span><span></span><span></span></div>
+
+            <p>Kannada</p>
+            <div class="lang-dots"><span></span><span></span><span></span><span></span></div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const data = {
+        name: "Anagha G S",
+        skills: ["C", "Python", "Java","HTML","CSS"],
+        certificates: [
+            "Exploring AI Tools",
+            "Web Design"
+        ]
+    };
+
+    document.getElementById("name").textContent = data.name;
+
+    const skillsBox = document.getElementById("skills");
+    data.skills.forEach(skill => {
+        let span = document.createElement("span");
+        span.textContent = skill;
+        skillsBox.appendChild(span);
+    });
+
+    const certBox = document.getElementById("certificates");
+    data.certificates.forEach(cert => {
+        let li = document.createElement("li");
+        li.textContent = cert;
+        certBox.appendChild(li);
+    });
+</script>
+
+</body>
+</html>
